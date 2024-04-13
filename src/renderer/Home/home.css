@@ -1,0 +1,550 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.dashboard-drag-area {
+    -webkit-app-region: drag;
+    height: 20px;
+    width: 20%;
+    position: absolute;
+    z-index: 10;
+}
+
+.nav-menu {
+    flex-basis: 20%;
+    background-color: #0a0a0b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6A6F83;
+    border-right: 2px solid #333;
+}
+
+.logo-title {
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.nav-house, .nav-star, .nav-trash {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+};
+
+.nav-house {
+    color: #FFF8E7;
+}
+
+.nav-star {
+    color: #FFCF40;
+}
+
+.nav-trash {
+    color: #E3242B;
+}
+
+.nav-link:hover {
+    color: #aaa;
+}
+
+.dashboard-main-content {
+    flex-basis: 30%;
+    background-color: #0a0a0b;
+    margin-left: 2px;
+    border-right: 2px solid #333;
+}
+
+.dashboard-maincontent-drag-area {
+    -webkit-app-region: drag;
+    height: 15px;
+    width: 30%;
+    position: absolute;
+    z-index: 10;
+}
+
+.search-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 30px;
+    height: 10px;
+    width: 380px;
+}
+
+.search-input-container {
+    position: relative;
+    flex: 1;
+    margin-right: 0px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 2;
+    height: 15px;
+    width: 15px;
+}
+
+#search-input {
+    padding: 8px 8px 8px 34px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    width: calc(100% - 30px);
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.account-add-btn {
+    width: 35px;
+    height: 30px;
+    background-color: #5665da;
+    border-radius: 5px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: -20px;
+    z-index: 100;
+}
+
+.account-add-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.account-add-btn:hover {
+    background-color: #4854b1;
+}
+
+.accounts-container { 
+    background: transparent;
+    width: 380px;
+    height: 700px;
+    margin-top: 40px;
+    margin-left: 10px;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.accounts-container::-webkit-scrollbar {
+    width: 8px;
+}
+  
+.accounts-container::-webkit-scrollbar-thumb {
+    background-color: #8A8B90;
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+  
+.accounts-container::-webkit-scrollbar-track {
+    background-color: #242633;
+    border-radius: 5px;
+    border: 2px solid #242633;
+}
+
+.account-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #1F212C;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    width: 330px;
+}
+
+.account-card.active {
+    border: 1px solid #ffffff;
+}
+
+.account-card:hover {
+    background-color: #1a1a1a;
+}
+
+.account-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-store {
+    color: #eee;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.account-email {
+    color: #555;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.delete-icon {
+    margin-left: auto;
+    color: #FF0000;
+    padding: 8px;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    color: #be4747;
+}
+
+.dashboard-right-sidebar {
+    flex-basis: 50%;
+    background-color: #0a0a0b;
+    position: relative;
+    color: #ffffff;
+    padding: 0 10px 10px;
+}
+
+.dashboard-right-drag-area {
+    -webkit-app-region: drag;
+    height: 20px;
+    width: 55%;
+    position: absolute;
+    z-index: 10;
+}
+
+.dashboard-top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.dashboard-app-version {
+    margin-right: 10px;
+    font-size: 12px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 2px solid #333;
+    cursor: pointer;
+}
+
+.dashboard-window-controls {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+
+.dashboard-button.minimize {
+    width: 25px;
+    height: 25px;
+}
+
+.dashboard-button.close {
+    width: 30px;
+    height: 30px;
+}
+
+.account-details-container {
+    background-color: transparent;
+    width: 650px;
+    height: 700px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-detail-card {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 2px solid #333;
+    position: relative;
+    width: 400px;
+    top: 30px;
+    left: 70px;
+}
+
+.account-detail-store {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    flex-grow: 1;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.account-detail-type {
+    color: #555;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.account-detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-detail-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.account-detail-star {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.email-card {
+    background-color: transparent;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 30px;
+    border-bottom: 2px solid #333;
+    position: relative;
+    width: 400px;
+    top: 30px;
+    left: 70px;
+}
+
+.email-info {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.account-detail-email {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+    margin-left: 10px;
+}
+
+.account-email-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.password-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #aca9a9;
+    width: 100%;
+    height: 60px;
+}
+
+.password-icon {
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+}
+
+.password-icon:not(:last-child) {
+    margin-right: 25px;
+}
+
+.account-detail-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+    margin-left: 10px;
+}
+
+.account-password-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.website-info {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+}
+
+.account-detail-website {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+    margin-left: 10px;
+}
+
+.account-website-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.notes-card {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    width: 400px;
+    top: 30px;
+    left: 70px;
+}
+
+.notes-info {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.account-detail-notes {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+}
+
+.account-notes-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.notification-dashboard {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff
+}
+
+.custom-notification {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    width: 400px;
+    height: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.message-and-progress {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.notification-message {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
