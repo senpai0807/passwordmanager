@@ -18,13 +18,6 @@
     "files": [
       "build/*"
     ],
-    "publish": [
-      {
-        "provider": "spaces",
-        "name": "lunarmanager",
-        "region": "nyc3"
-      }
-    ],
     "win": {
       "icon": "./src/renderer//Images/UI/lunar.ico",
       "target": "nsis"
