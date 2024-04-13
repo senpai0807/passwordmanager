@@ -40,12 +40,9 @@ const renderWindow = async () => {
     });
 
     mainWindow.setMenu(null);
-    mainWindow.on("ready-to-show", () => {
-        mainWindow.webContents.openDevTools();
-    });
-    /* mainWindow.webContents.on('devtools-opened', () => {
+    mainWindow.webContents.on('devtools-opened', () => {
         mainWindow.webContents.closeDevTools();
-    }); */
+    });
 
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
